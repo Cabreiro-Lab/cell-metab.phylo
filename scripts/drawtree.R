@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+## Rscript to draw a small tree
+
 # libraries
 suppressMessages(suppressWarnings(library(optparse)));
 suppressMessages(library(seqinr));

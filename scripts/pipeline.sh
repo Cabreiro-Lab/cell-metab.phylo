@@ -1,5 +1,5 @@
 #!/bin/bash
-# script for tesing
+# bash script to produce a simple tree
 
 sleep 1
 

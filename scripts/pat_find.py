@@ -8,7 +8,6 @@ Daniel Martinez, August - 2021
 
 from Bio import SeqIO
 import sys
-from termcolor import colored
 
 # input and output
 inFile = sys.argv[1]
@@ -29,14 +28,15 @@ def pattern_find(seqs):
 			pos2.append(records[i].seq.find('GIEA') + 4)
 		else:
 			pass
-	# if temp > 0:
-	# 	print('Patterns found in ', str(temp), 'sequences!\n')
-	# elif temp == 0:
-	# 	print('Pattern not found...\n')
-	# else:
-	# 	print('Something went wrong. I dont feel good, Mr. Stark...\n')
-	# print(colored(('For GVEA pattern, the aa is at position: ' + str(list(set(pos1))[0] + 1)), 'green'))
-	# print(colored(('For GIEA pattern, the aa is at position: ' + str(list(set(pos2))[0] + 1)+ '\n'), 'blue'))
+	if temp > 0:
+		print('Patterns found in ', str(temp), 'sequences!\n')
+	elif temp == 0:
+		print('Pattern not found...\n')
+		break
+	else:
+		print('Something went wrong.\n')
+	print(('For GVEA pattern, the aa is at position: ' + str(list(set(pos1))[0] + 1)))
+	print(('For GIEA pattern, the aa is at position: ' + str(list(set(pos2))[0] + 1)+ '\n'))
 	pos1 = list(set(pos1))[0] + 1
 	print(pos1)
 	sys.exit(0)
